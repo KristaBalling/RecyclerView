@@ -7,22 +7,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
-    </android.support.v7.widget.CardView>
-
+            android:orientation="vertical"/>
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:layou_height="wrap_content"
         android:paddingLeft="14dp"
         android:paddingTop="10dp"
         android:text="Title"
@@ -31,7 +27,6 @@
 
     <TextView
         android:id="@+id/description"
-        android
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -39,6 +34,6 @@
         android:paddingLeft="14dp"
         android:paddingTop="5dp"
         android:text="Description"
-        android:weight="1" />
+        android:layout_weight="1" />
 
 </RelativeLayout>
