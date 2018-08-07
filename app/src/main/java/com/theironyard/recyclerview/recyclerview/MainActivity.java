@@ -24,15 +24,16 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewID);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         listItems = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            ListItem item = new ListItem(
-                    "Item " + (i+1),
-                    "Description"
+            ListItem listItem = new ListItem(
+                    "Item " + (i + 1),
+                    "Description "
             );
 
-            listItems.add(item);
+            listItems.add(listItem);
 
         }
 

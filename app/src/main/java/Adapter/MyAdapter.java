@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.theironyard.recyclerview.recyclerview.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Model.ListItem;
@@ -32,15 +33,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent, false);
 
-        return new ViewHolder(view);
+        return new ViewHolder(view, context, (ArrayList<ListItem>) listItems);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
-        ListItem item = listItems.get(position);
-        holder.name.setText(item.getName());
-        holder.description.setText(item.getDescription());
+        ListItem listItem = listItems.get(position);
+        holder.name.setText(listItem.getName());
+        holder.description.setText(listItem.getDescription());
 
     }
 
@@ -49,12 +50,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         return listItems.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public TextView description;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
+        public ViewHolder(View view, Context ctx, ArrayList<ListItem> items) {
+            super(view);
+            listItems = items;
+            context = ctx;
+
+
 
             name = (TextView) itemView.findViewById(R.id.title);
             description = (TextView) itemView.findViewById(R.id.description);
