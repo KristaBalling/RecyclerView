@@ -14,13 +14,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:paddingTop="5dp"
+            android:paddingLeft="14dp">
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingTop="10dp"
         android:text="Title"
         android:textStyle="bold"
         android:textSize="18sp"
@@ -36,8 +36,6 @@
         <TextView
             android:id="@+id/rating"
             android:text="Great!"
-            android:paddingTop="10dp"
-            android:paddingLeft="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
