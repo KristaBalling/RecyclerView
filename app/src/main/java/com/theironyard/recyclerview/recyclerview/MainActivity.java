@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         listItems = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            ListItem listItem = new ListItem(
+            ListItem item = new ListItem(
                     "Item " + (i + 1),
                     "Description "
             );
 
-            listItems.add(listItem);
+            listItems.add(item);
 
         }
 

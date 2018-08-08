@@ -39,9 +39,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        ListItem listItem = listItems.get(position);
-        holder.name.setText(listItem.getName());
-        holder.description.setText(listItem.getDescription());
+        ListItem item = listItems.get(position);
+        holder.name.setText(item.getName());
+        holder.description.setText(item.getDescription());
 
     }
 
@@ -54,8 +54,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public TextView name;
         public TextView description;
 
-        public ViewHolder(View view, Context ctx, ArrayList<ListItem> items) {
-            super(view);
+        public ViewHolder(View itemView, Context ctx, ArrayList<ListItem> items) {
+            super(itemView);
             listItems = items;
             context = ctx;
 
