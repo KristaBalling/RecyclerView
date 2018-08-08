@@ -27,15 +27,21 @@ public class MainActivity extends AppCompatActivity {
 
         listItems = new ArrayList<>();
 
-        for (int i = 0; i < 10; i++) {
-            ListItem item = new ListItem(
-                    "Item " + (i + 1),
-                    "Description "
-            );
+        ListItem item1 = new ListItem("Jurrasic World", "The Park is Gone", "Childhood Complete.");
+        ListItem item2 = new ListItem("Avengers: Infinity Wars", "Everybody dies.", "Life over.");
 
-            listItems.add(item);
+        // for (int i = 0; i < 10; i++) {
+        //    ListItem item = new ListItem(
+        //          "Item " + (i + 1),
+        //           "Description ",
+        //           "Excellent"
+        //   );
 
-        }
+
+        listItems.add(item1);
+        listItems.add(item2);
+
+   // }
 
         adapter = new MyAdapter(this, listItems);
         recyclerView.setAdapter(adapter);
